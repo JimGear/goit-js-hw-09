@@ -4,6 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig(({ command }) => {
   return {
+    base: 'https://github.com/JimGear/goit-js-hw-09.git',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -17,7 +18,7 @@ export default defineConfig(({ command }) => {
       emptyOutDir: true,
       rollupOptions: {
         input: {
-          main: resolve(__dirname, '/src/index.html'),
+          main: resolve(__dirname, './src/index.html'),
         },
         output: {
           manualChunks(id) {
