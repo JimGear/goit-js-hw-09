@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite';
-import { glob } from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
-import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+import { resolve } from 'path';
 
 export default defineConfig(({ command }) => {
   return {
@@ -10,10 +8,17 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    server: {
+      open: '/',
+    },
     build: {
       sourcemap: true,
+      outDir: '../dist',
+      emptyOutDir: true,
       rollupOptions: {
-        input: glob.sync('./src/*.html'),
+        input: {
+          main: resolve(__dirname, 'src/index.html'),
+        },
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
@@ -34,12 +39,8 @@ export default defineConfig(({ command }) => {
           },
         },
       },
-      outDir: '../dist',
-      emptyOutDir: true,
     },
     plugins: [
-      injectHTML(),
-      FullReload(['./src/**/**.html']),
       SortCss({
         sort: 'mobile-first',
       }),

@@ -1,0 +1,25 @@
+
+Entering npm script environment at location:
+D:\COURSE\goit fullstack\js block\goit-js-hw-09
+Type 'exit' or ^D when finished
+
+Microsoft Windows [Version 10.0.22631.5472]
+(c) Корпорац?я Майкрософт. Ус? права захищен?.
+
+D:\COURSE\goit fullstack\js block\goit-js-hw-09>
+up to date, audited 58 packages in 3s
+
+17 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 low, 3 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+D:\COURSE\goit fullstack\js block\goit-js-hw-09>D:\COURSE\goit fullstack\js block\goit-js-hw-09>D:\COURSE\goit fullstack\js block\goit-js-hw-09>
