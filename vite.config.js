@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig(({ command }) => {
   return {
-    base: 'https://github.com/JimGear/goit-js-hw-09.git',
+    base: '/goit-js-hw-09/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
