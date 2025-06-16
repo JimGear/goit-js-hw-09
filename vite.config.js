@@ -17,7 +17,7 @@ export default defineConfig(({ command }) => {
       emptyOutDir: true,
       rollupOptions: {
         input: {
-          main: resolve(__dirname, 'src/index.html'),
+          main: resolve(__dirname, '/src/index.html'),
         },
         output: {
           manualChunks(id) {
